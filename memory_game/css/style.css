@@ -41,6 +41,13 @@ h2 {
   font-size: 20px;
   text-transform: uppercase;
 }
+h3 {
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 1px;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin: 50px auto 25px;
+}
 p {
   font-family: "Droid Serif", serif;
   line-height: 26px;

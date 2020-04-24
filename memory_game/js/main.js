@@ -22,7 +22,10 @@ let cards = [
   }
 ];
 let cardsInPlay = [];
-
+let score = 0;
+function gameScore() {
+  document.getElementById('game-score').innerHTML = `You have found ${score} matches!`;
+}
 function buttonHidden() {
   document.getElementById('play-again').style.display = 'none';
 }
@@ -37,12 +40,14 @@ function checkForMatch() {
     if (cardsInPlay[0] === cardsInPlay[1]) {
       alert('You found a match!!! Click the button to play again!');
       buttonVisibility();
+      score += 1;
+      return score;
     } else {
       alert('Sorry, try again! Click the button to play again!');
       buttonVisibility();
     }
   }
-
+  gameScore();
 }
 
 
@@ -68,5 +73,9 @@ function createBoard() {
   buttonHidden();
 }
 
+function refreshGame() {
+  location.reload(false);
+}
 
 createBoard();
+gameScore();
