@@ -22,6 +22,7 @@ let cards = [
   }
 ];
 let cardsInPlay = [];
+
 // chooseCards creates a random array len 4 for createBoard to pull card objects from
 function chooseCards() {
   const random = [];
